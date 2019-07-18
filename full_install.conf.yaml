@@ -1,0 +1,19 @@
+- clean: ['~']
+
+- link:
+    ~/.aliases: aliases
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.dotfiles: ''
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.ssh: ssh/
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+
+- shell:
+    - [echo All Done]
+    #- [./scripts/install_deps.sh, Installing command line tools]
+    #- [git submodule update --init --recursive, Installing submodules]
+    #- [cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer]
+
