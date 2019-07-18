@@ -12,8 +12,5 @@
     ~/.vimrc: vimrc
 
 - shell:
-    - [echo All Done]
-    #- [./scripts/install_deps.sh, Installing command line tools]
-    #- [git submodule update --init --recursive, Installing submodules]
-    #- [cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer]
+    - [git submodule update --init --recursive, Installing submodules]
 

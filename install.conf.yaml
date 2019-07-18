@@ -1,27 +1,12 @@
-- shell:
-  - mkdir -p ~/src
-  - [mkdir -p ~/downloads, Creating downloads directory]
-  -
-    command: read var && echo Your variable is $var
-    stdin: true
-    stdout: true
-    description: Reading and printing variable
-    quiet: true
-  -
-    command: read fail
-    stderr: true
-
-    #- shell:
-    #    -
-    #      command: echo Using the "command" syntax
-    #      description: I used the "command" syntax
-    #
-    #    - echo No bracket on this echo cmd
-    #    - [echo Bracketed Test, This echo cmd is bracketted]
-
 - clean: ['~']
 
 - link:
-    ~/.gitconfig: gitconfig
-
-
+    ~/.bashrc:              bashrc
+    ~/dotfiles:             ''
+    ~/.gitconfig:           gitconfig
+    ~/.vimrc:               vimrc
+    ~/.vimrc.abbreviations: vimrc.abbreviations
+    ~/.vimrc.fileType:      vimrc.fileType
+    ~/.vimrc.funcKeys:      vimrc.funcKeys
+    ~/.vimrc.standard:      vimrc.standard
+    ~/.vimrc.typos:         vimrc.typos
