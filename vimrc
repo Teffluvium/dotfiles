@@ -36,6 +36,11 @@ if filereadable(expand("~/.vim/local/fileType"))
    source ~/.vim/local/fileType
 endif
 
+" Source configuration for different file types
+if filereadable(expand("~/.vim/local/vundle"))
+   source ~/.vim/local/vundle
+endif
+
 
 "------------------------------------------------------------------------------
 " Local settings.
