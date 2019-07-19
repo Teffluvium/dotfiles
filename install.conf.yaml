@@ -8,12 +8,8 @@
 - link:
     ~/.bashrc:              bashrc
     ~/.gitconfig:           gitconfig
+    ~/.vim:                 vim/
     ~/.vimrc:               vimrc
-    ~/.vimrc.abbreviations: vimrc.abbreviations
-    ~/.vimrc.fileType:      vimrc.fileType
-    ~/.vimrc.funcKeys:      vimrc.funcKeys
-    ~/.vimrc.standard:      vimrc.standard
-    ~/.vimrc.typos:         vimrc.typos
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
