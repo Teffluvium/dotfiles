@@ -158,26 +158,26 @@ function popd()
     builtin dirs -v
 }
 
-# Custom Prompt
-set_prompt_style () {
-    # Define some colors
-    local bldpur='\e[1;35m' # Purple
-    local bldblu='\e[1;34m' # Blue
-    local bldblk='\e[1;30m' # Black - Bold
-    local bldred='\e[1;31m' # Red
-    local bldgrn='\e[1;32m' # Green
-    local txtrst='\e[0m'    # Text Reset
-
-    # Create formated/colored text
-    local bashuser="\[$bldpur\]\u@\[$txtrst\]"    # username
-    local bashhost="\[$bldpur\]\h\[$txtrst\]"     # hostname
-    local bashdir="\[$bldblu\]\w\[$txtrst\]"      # directory
-    local bashprompt="\[$bldblk\]:\n\[$txtrst\]"  # prompt symbol
-    #local gitdir="\$(__git_ps1)"     # Current Git dir
-    if [ `whoami` == "root" ] ; then
-        local bashuser="\[$bldred\]\u@\[$txtrst\]"
-        local bashhost="\[$bldred\]\h\[$txtrst\]"
-    fi
-    PS1="$bashuser$bashhost $bashdir$gitdir$bashprompt$ "
-}
-set_prompt_style
+## Custom Prompt
+#set_prompt_style () {
+#    # Define some colors
+#    local bldpur='\e[1;35m' # Purple
+#    local bldblu='\e[1;34m' # Blue
+#    local bldblk='\e[1;30m' # Black - Bold
+#    local bldred='\e[1;31m' # Red
+#    local bldgrn='\e[1;32m' # Green
+#    local txtrst='\e[0m'    # Text Reset
+#
+#    # Create formated/colored text
+#    local bashuser="\[$bldpur\]\u@\[$txtrst\]"    # username
+#    local bashhost="\[$bldpur\]\h\[$txtrst\]"     # hostname
+#    local bashdir="\[$bldblu\]\w\[$txtrst\]"      # directory
+#    local bashprompt="\[$bldblk\]:\n\[$txtrst\]"  # prompt symbol
+#    #local gitdir="\$(__git_ps1)"     # Current Git dir
+#    if [ `whoami` == "root" ] ; then
+#        local bashuser="\[$bldred\]\u@\[$txtrst\]"
+#        local bashhost="\[$bldred\]\h\[$txtrst\]"
+#    fi
+#    PS1="$bashuser$bashhost $bashdir$gitdir$bashprompt$ "
+#}
+#set_prompt_style
