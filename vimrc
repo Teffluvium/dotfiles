@@ -12,28 +12,28 @@ version 6.3
 
 
 " Source some standard settings
-if filereadable(expand("~/.vimrc.standard"))
-   source ~/.vimrc.standard
+if filereadable(expand("~/.vim/local/standard"))
+   source ~/.vim/local/standard
 endif
 
 " Source a list of abbreviations
-if filereadable(expand("~/.vimrc.abbreviations"))
-   source ~/.vimrc.abbreviations
+if filereadable(expand("~/.vim/local/abbreviations"))
+   source ~/.vim/local/abbreviations
 endif
 
 " Source a remapping of the function keys
-if filereadable(expand("~/.vimrc.funcKeys"))
-   source ~/.vimrc.funcKeys
+if filereadable(expand("~/.vim/local/funcKeys"))
+   source ~/.vim/local/funcKeys
 endif
 
 " Source a list of common typos to auto correct
-if filereadable(expand("~/.vimrc.typos"))
-   source ~/.vimrc.typos
+if filereadable(expand("~/.vim/local/typos"))
+   source ~/.vim/local/typos
 endif
 
 " Source configuration for different file types
-if filereadable(expand("~/.vimrc.fileType"))
-   source ~/.vimrc.fileType
+if filereadable(expand("~/.vim/local/fileType"))
+   source ~/.vim/local/fileType
 endif
 
 
