@@ -44,12 +44,6 @@ export PATH=~/bin:./:$PATH
 export PATH=$PATH:$ANDROID_SDK:$ANDROID_NDK
 export OpenCV_DIR=/usr/share/OpenCV
 
-if [ -f ~/bin/git-completion.bash ]; then
-    source ~/bin/git-completion.bash
-fi
-if [ -f ~/bin/git-prompt.sh ]; then
-    source ~/bin/git-prompt.sh
-fi
 
 # Completion options
 # ##################
@@ -87,6 +81,10 @@ export PROMPT_COMMAND="history -a"
 # Save lots of history information
 export HISTFILESIZE=20000
 export HISTSIZE=5000
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
 
 # Load environment settings from gnome-keyring-daemon
 #export `gnome-keyring-daemon`
@@ -132,7 +130,7 @@ alias whence='type -a'                        # where, of a sort
 alias la='ls -A'                              # all (except . and .. )
 alias ll='ls -l'                              # long list
 alias lla='ls -lA'                            # long list of all (except . and .. )
-# alias l='ls -CF'                            #
+alias l='ls -CF'                              #
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -140,24 +138,15 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias dirs='builtin dirs -v'
 
-# GIT based variables
-# ###################
-# GIT_PS1_SHOWCOLORHINTS=1
-# GIT_PS1_STATESEPARATOR=1
-# GIT_PS1_SHOWUPSTREAM="auto git"
-# GIT_PS1_SHOWUNTRACKEDFILES=1
-# GIT_PS1_SHOWSTASHSTATE=1
-# GIT_PS1_SHOWDIRTYSTATE=1
-# GIT_PS1_DESCRIBE_STYLE="branch"
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 
 # Functions
 # #########
 
-# Some example functions
-# function settitle() { echo -ne "\e]2;$@\a\e]1;$@\a"; }
-
-#redefine pushd and popd so they output listing of the directory stack
+# Redefine pushd and popd so they output listing of the directory stack
 function pushd()
 {
     builtin pushd "$@" > /dev/null
@@ -192,7 +181,3 @@ set_prompt_style () {
     PS1="$bashuser$bashhost $bashdir$gitdir$bashprompt$ "
 }
 set_prompt_style
-
-#export PATH="$HOME/.rbenv/bin:$PATH"
-#eval "$(rbenv init -)"
-#export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
