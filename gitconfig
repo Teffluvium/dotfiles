@@ -3,14 +3,16 @@
 	br = branch
 	co = checkout
 [user]
-	name = Tim Herrin
-	email = tim.herrin@ga.com
+	name  = Tim Herrin
+    email = teffluvium@gmail.com
+    # email = tim.herrin@ga.com
 [filter "lfs"]
-	process = git-lfs filter-process
+	process  = git-lfs filter-process
 	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
+	clean    = git-lfs clean -- %f
+	smudge   = git-lfs smudge -- %f
 [credential]
 	helper = manager
 [core]
 	autocrlf = true
+	editor   = vim
