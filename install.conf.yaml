@@ -7,7 +7,6 @@
 
 - link:
     ~/.bashrc:              bashrc
-    ~/dotfiles:             ''
     ~/.gitconfig:           gitconfig
     ~/.vimrc:               vimrc
     ~/.vimrc.abbreviations: vimrc.abbreviations
@@ -15,3 +14,7 @@
     ~/.vimrc.funcKeys:      vimrc.funcKeys
     ~/.vimrc.standard:      vimrc.standard
     ~/.vimrc.typos:         vimrc.typos
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+

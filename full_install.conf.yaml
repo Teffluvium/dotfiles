@@ -1,16 +1,36 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
 - clean: ['~']
 
 - link:
-    ~/.aliases: aliases
-    ~/.bash_profile: bash_profile
-    ~/.bashrc: bashrc
-    ~/.dotfiles: ''
-    ~/.gitconfig: gitconfig
-    ~/.gitignore_global: gitignore_global
-    ~/.ssh: ssh/
-    ~/.vim: vim/
-    ~/.vimrc: vimrc
+    ~/.bashrc:              bashrc
+    ~/.gitconfig:           gitconfig
+    ~/.gitignore:           gitignore
+    ~/.ssh:                 ssh/
+    ~/.vim:                 vim/
+    ~/.vimrc.abbreviations: vimrc.abbreviations
+    ~/.vimrc.fileType:      vimrc.fileType
+    ~/.vimrc.funcKeys:      vimrc.funcKeys
+    ~/.vimrc.standard:      vimrc.standard
+    ~/.vimrc.typos:         vimrc.typos
+    ~/.vimrc:               vimrc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
 
+# - shell:
+#   - mkdir -p ~/src
+#   - [mkdir -p ~/downloads, Creating downloads directory]
+#   -
+#     command: read var && echo Your variable is $var
+#     stdin: true
+#     stdout: true
+#     description: Reading and printing variable
+#     quiet: true
+#   -
+#     command: read fail
+#     stderr: true
+#
