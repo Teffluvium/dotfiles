@@ -42,6 +42,6 @@ endif
 "------------------------------------------------------------------------------
 
 " Source a local configuration file if available.
-if filereadable(expand("~/.vim/local/local"))
-  source ~/.vim/local/local
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
 endif
