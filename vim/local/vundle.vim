@@ -10,6 +10,13 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" Colorschemes
+Plugin 'ajh17/spacegray.vim'
+Plugin 'Zenburn'
+Plugin 'henrynewcomer/vim-theme-papaya'
+Plugin 'fenetikm/falcon'
+Plugin 'dikiaap/minimalist'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
