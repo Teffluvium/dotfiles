@@ -11,11 +11,6 @@
     ~/.gitignore:           gitignore
     ~/.ssh:                 ssh/
     ~/.vim:                 vim/
-    ~/.vimrc.abbreviations: vimrc.abbreviations
-    ~/.vimrc.fileType:      vimrc.fileType
-    ~/.vimrc.funcKeys:      vimrc.funcKeys
-    ~/.vimrc.standard:      vimrc.standard
-    ~/.vimrc.typos:         vimrc.typos
     ~/.vimrc:               vimrc
 
 - shell:

@@ -1,3 +1,7 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+[submodule "vim"]
+	path = vim
+	url = https://github.com/Teffluvium/dot_vim.git
+	branch = master
