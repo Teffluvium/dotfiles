@@ -16,3 +16,4 @@
 [core]
     autocrlf = true
     editor   = vim
+    excludesFile = ~/.gitignore_global
