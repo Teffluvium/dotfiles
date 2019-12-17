@@ -158,6 +158,11 @@ function popd()
     builtin dirs -v
 }
 
+# Generate a recursive list of unique file extensions
+function listUniqueExtensions(){
+    find . -type f | sed -n 's/.*\(\<\w\+\)/\1/p' | sort -u
+}
+
 ## Custom Prompt
 #set_prompt_style () {
 #    # Define some colors
