@@ -8,9 +8,9 @@ git clone https://github.com/Teffluvium/dotfiles.git && cd dotfiles
 ```
 and then run either
 ```
-./install minimal_install
+./install -c minimal_install.config.yaml
 ```
 or
 ```
-./install full_install
+./install -c full_install.config.yaml
 ```
