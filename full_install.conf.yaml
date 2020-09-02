@@ -8,11 +8,11 @@
 - link:
     ~/.bashrc:              bashrc
     ~/.gitconfig:           gitconfig
-    ~/.gitignore:           gitignore
     ~/.gitignore_global:    gitignore_global
-    ~/.ssh:                 ssh/
     ~/.vim:                 vim/
-    ~/.vimrc:               vimrc
+    # ~/.gitignore:           gitignore
+    # ~/.ssh:                 ssh/
+    # ~/.vimrc:               vimrc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
