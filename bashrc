@@ -42,7 +42,7 @@ export PATH=~/bin:./:$PATH
 # export NDKROOT=/usr/share/android-tools/android-ndk-r10
 # export OPENCV_PACKAGE_DIR=/home/SDKs/OpenCV-2.4.9-android-sdk
 export PATH=$PATH:$ANDROID_SDK:$ANDROID_NDK
-export OpenCV_DIR=/usr/share/OpenCV
+# export OpenCV_DIR=/usr/share/OpenCV
 
 
 # Completion options
@@ -142,6 +142,17 @@ alias dirs='builtin dirs -v'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+    __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
+    source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
+fi
+
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+if [ $(uname) == "Darwin" ]; then
+    export ANDROID_NDK_HOME="/usr/local/share/android-ndk"
+    export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
+fi
 
 # Functions
 # #########
@@ -158,26 +169,3 @@ function popd()
     builtin dirs -v
 }
 
-## Custom Prompt
-#set_prompt_style () {
-#    # Define some colors
-#    local bldpur='\e[1;35m' # Purple
-#    local bldblu='\e[1;34m' # Blue
-#    local bldblk='\e[1;30m' # Black - Bold
-#    local bldred='\e[1;31m' # Red
-#    local bldgrn='\e[1;32m' # Green
-#    local txtrst='\e[0m'    # Text Reset
-#
-#    # Create formated/colored text
-#    local bashuser="\[$bldpur\]\u@\[$txtrst\]"    # username
-#    local bashhost="\[$bldpur\]\h\[$txtrst\]"     # hostname
-#    local bashdir="\[$bldblu\]\w\[$txtrst\]"      # directory
-#    local bashprompt="\[$bldblk\]:\n\[$txtrst\]"  # prompt symbol
-#    #local gitdir="\$(__git_ps1)"     # Current Git dir
-#    if [ `whoami` == "root" ] ; then
-#        local bashuser="\[$bldred\]\u@\[$txtrst\]"
-#        local bashhost="\[$bldred\]\h\[$txtrst\]"
-#    fi
-#    PS1="$bashuser$bashhost $bashdir$gitdir$bashprompt$ "
-#}
-#set_prompt_style
